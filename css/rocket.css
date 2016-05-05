@@ -1,5 +1,5 @@
 body {
-	font-family: sans-serif;
+	font-family: 'helvetica', 'arial', sans-serif;
 }
 
 .left {
@@ -12,6 +12,26 @@ body {
 	padding-left: 10px;
 }
 
+.interface {
+	text-align: center;
+	padding: 20px;
+}
+
+a.button {
+	display: inline-block;
+	background-color: white;
+	color: black;
+	padding: 20px 40px;
+	text-decoration: none;
+	text-transform: uppercase;
+	border-radius: 10px;
+	transition: color 300ms;
+}
+
+a:hover {
+	color: red;
+}
+
 .right {
 	background-color: aliceblue;
 	position: fixed;
@@ -22,7 +42,7 @@ body {
 }
 
 .ground {
-	background-color: green;
+	background: url('../img/ground.png');
 	position: absolute;
 	bottom: 0;
 	right: 0;
@@ -30,13 +50,44 @@ body {
 	height: 20px;
 }
 
+.nervous {
+	position: absolute;
+	bottom: 160px;
+	left: 50%;
+	background: url('../img/nervous.png') no-repeat 0 0;
+	width: 150px;
+	height: 179px;
+	margin-left: -200px;
+	display: none;
+}
+
+.nervous.show {
+	display: block;
+}
+
+.cant-wait {
+	position: absolute;
+	bottom: 160px;
+	right: 50%;
+	background: url('../img/cant-wait.jpg') no-repeat 0 0;
+	width: 150px;
+	height: 82px;
+	margin-right: -200px;
+	display: none;
+}
+
+.cant-wait.show {
+	display: block;
+}
+
 .rocket {
 	position: absolute;
 	left: 50%;
-	bottom: 20px;
-	width: 20px;
+	bottom: 5px;
+	width: 31px;
 	height: 100px;
-	background-color: blue;
+	margin-left: -15.5px;
+	background: url('../img/rocket.png') no-repeat 0 0;
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
 	transition: bottom 10000ms;
@@ -49,6 +100,14 @@ body.body-state1 .rocket {
 body.body-state3 .rocket,
 body.body-state4 .rocket {
 	bottom: 1200px;
+}
+
+body.body-state5 .rocket {
+	background-image: url('../img/boom.png');
+	width: 200px;
+	height: 200px;
+	margin-left: -100px;
+
 }
 
 .state1,
